@@ -9,8 +9,9 @@
 
 div.nav-bar {
     display: flex;
+    align-items: center;
     justify-content: space-between;
-    padding: 1rem 6rem;
+    padding: 1rem;
     width: 100vw;
     background: #304353;
 }
@@ -21,9 +22,24 @@ div.logo {
 }
 
 ul.nav-links {
-    display: flex;
+    display: none;
+    flex-direction: column;
+    
+    position:absolute;
+    width: 280px;
+    height: 100vh;
+    background: white;
+    left: 0;
+    top: 0;
     margin: 0;
-    padding: 0;
+    padding: 16px 0;
+
+}
+
+.nav-links span{
+    display: block;
+    margin-left: auto;
+    margin-right: 32px;
 }
 
 ul li {
@@ -46,7 +62,7 @@ ul li a:hover {
 
 div.hero-section {
     background: #304353;
-    padding: 10rem;
+    padding: 10rem 1rem;
 }
 
 div.hero-content-heading {
@@ -89,7 +105,7 @@ div.hero-content-btn a {
 
 div.hero-background {
     background: #f0f0f0;
-    padding: 10rem;
+    padding: 10rem 1rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -98,14 +114,13 @@ div.hero-background {
 div.background {
     background: #fff;
     box-shadow: 2px 2px 15px 0 rgb(135 135 135 / 40%);
-    padding: 15px 40px;
-    width: 550px;
-    height: 220px;
-    position: relative;
+    padding: 0 40px 2rem;
+    
+    
 }
 
 div.background h4 {
-    padding: 2rem;
+    padding: 2rem 0;
     color: #555657;
     font-size: 1rem;
     letter-spacing: 2px;
@@ -114,15 +129,13 @@ div.background h4 {
 
 div.background p {
     color: #A6A5AA;
-    padding-left: 2rem;
+    
     font-size: 0.8rem;
     letter-spacing: 2px;
 }
 
 div.hero-background-pos {
-    position: absolute;
-    right: 0px;
-    left: 66%;
+    display: none;
     background: #fff;
     width: 140px;
     height: 140px;
@@ -160,7 +173,7 @@ div.snapshot-box {
 
 div.snapshot-box-content {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
 }
 
 div.box1 {
@@ -345,3 +358,30 @@ div.footer h6 {
     font-size: 1rem;
     padding-top: 6rem;
 }
+
+@media  screen and (min-width: 768px) {
+    ul.nav-links {
+        display: flex;
+        flex-direction: row;
+        
+        position: static;
+        width: unset;
+        height: unset;
+        background: none;
+        
+        padding: 0;
+    
+    }
+    
+    .nav-links span{
+        display: none;
+        
+    }
+
+    .hamburger {
+        display:none;
+    }
+
+
+}
+
